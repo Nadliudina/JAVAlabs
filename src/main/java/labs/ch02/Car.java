@@ -1,51 +1,66 @@
 package labs.ch02;
 
 /**
- * 9
+ * класс Car:
+ * Getx()
+ * GetFuel()
+ * AddFuel заправить
+ * GetCost
+ * Drive перемещает автомобиль , расходуя топливо
+ * toString
  */
 public class Car {
     public Car(int posx, int fuel, int costOfMile) {
         this.posx = posx;
-        if (fuel<0)
-            fuel*=-1;
+        if (fuel < 0)
+            fuel *= -1;
         this.fuel = fuel;
-        if (costOfMile<0)
-            costOfMile*=-1;
+        if (costOfMile < 0)
+            costOfMile *= -1;
         this.costOfMile = costOfMile;
-        id=gid;
+        id = gid;
         gid++;
     }
+
     private int posx;
-    private static int gid=0;
+    private static int gid = 0;
     public final int id;
-    public int Getx(){
+
+    public int Getx() {
         return posx;
     }
+
     private int fuel;
-    public int GetFuel(){
+
+    public int GetFuel() {
         return fuel;
     }
-    public boolean AddFuel(int add){
-        if(add<0&&add<fuel*-1)
+
+    public boolean AddFuel(int add) {
+        if (add < 0 && add < fuel * -1)
             return false;
-        fuel+=add;
+        fuel += add;
         return true;
     }
+
     private int costOfMile;
-    public int GetCost(){
+
+    public int GetCost() {
         return costOfMile;
     }
-    public boolean Drive(int miles){
-        if (miles*costOfMile>fuel||miles*costOfMile<-fuel)
+
+    public boolean Drive(int miles) {
+        if (miles * costOfMile > fuel || miles * costOfMile < -fuel)
             return false;
-        posx+=miles;
-        if (miles>0)
-            fuel-=miles*costOfMile;
+        posx += miles;
+        if (miles > 0)
+            fuel -= miles * costOfMile;
         else
-            fuel+=miles*costOfMile;
+            fuel += miles * costOfMile;
         return true;
     }
-    public String toString(){
-        return("Car("+id+") posX: "+Getx()+" fuel: "+GetFuel()+" Cost: "+GetCost());
+
+    public String toString() {
+        return ("Car(" + id + ") posX: " + Getx() + " fuel: " + GetFuel() + " Cost: " + GetCost());
     }
 }
