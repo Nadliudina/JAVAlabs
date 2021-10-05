@@ -1,0 +1,56 @@
+package labs.ch02;
+
+/**
+ * 5
+ */
+public class Point {
+    protected double x,y;
+    private static int gid=0;
+    public final int id;
+    public Point(double x,double y){
+        this.x=x;
+        this.y=y;
+        id=gid;
+        gid++;
+    }
+    public double GetX(){
+        return x;
+    }
+    public double GetY(){
+        return y;
+    }
+    public Point GetPointWithShift(double x1,double y1){
+        return new Point(x+=x1,y+=y1);
+    }
+    public Point GetPointWithScale(double x1,double y1){
+        return new Point(x*=x1,y*=y1);
+    }
+    public void ShiftPoint(double x1,double y1){
+        x+=x1;y+=y1;
+    }
+    public void ScalePoint(double x1,double y1){
+        x*=x1;y*=y1;
+    }
+    @Override
+    public String toString(){
+        return "Point("+id+"): x = "+x+ " y = "+y;
+    }
+    @Override
+    public boolean equals(Object other){
+        if (this == other) {
+            return true;
+        }
+        if (other instanceof Point) {
+            Point otherPoint = (Point)other;
+            if(otherPoint.id==id)
+                return true;
+            if (otherPoint.x==x&&otherPoint.y==y)
+                return true;
+        }
+        return false;
+    }
+    @Override
+    public int hashCode() {
+        return (int) (id+x*10+y*100+id*x*y);
+    }
+}
