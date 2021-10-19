@@ -7,8 +7,9 @@ import labs.ch02.Point;
 import labs.ch03.Employee;
 import labs.ch03.Measurable;
 import labs.ch03.Runner;
-import labs.ch04.LabeledPoint;
+import labs.ch04.*;
 
+import java.io.Console;
 import java.io.File;
 import java.lang.reflect.*;
 import java.math.BigInteger;
@@ -109,5 +110,46 @@ public class App {
         //  String xxx="java.lang.String";
         //  Method method=systemClass.getDeclaredMethod("println", Class.forName(xxx));
         // method.invoke( obj,"sada");
+
+        //Shape s=new Shape();
+        Circle circle=new Circle(new Point(3,4),2);
+        System.out.println(circle);
+        Circle ccircle =(Circle) circle.clone();
+        System.out.println( "clone : "+ccircle);
+        circle.moveBy(1,-1);
+        System.out.println(circle);
+        if(ccircle!=null)
+            System.out.println( "clone : "+ccircle);
+        System.out.println();
+
+        Rectangle rectangle=new Rectangle(new Point(1,2),5,6);
+        System.out.println(rectangle);
+        Rectangle crectangle=null;
+        crectangle= (Rectangle) rectangle.clone();
+        System.out.println( "clone : "+crectangle);
+        rectangle.moveBy(4,8);
+        System.out.println(rectangle);
+        if(crectangle!=null)
+            System.out.println( "clone : "+crectangle);
+        System.out.println();
+
+        Line line=new Line(new Point(1,1),new Point(10,20));
+        System.out.println(line);
+        Line cline=null;
+        cline=(Line) line.clone();
+        System.out.println( "clone : "+cline);
+        line.moveBy(5,-5);
+        System.out.println(line);
+        if(cline!=null)
+            System.out.println( "clone : "+cline);
+        System.out.println();
+
+        Line emptyLine=null;
+        try {
+            Line cline1=(Line) emptyLine.clone();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("OK");
     }
 }
