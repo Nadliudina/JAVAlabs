@@ -49,6 +49,11 @@ public class Car {
         return costOfMile;
     }
 
+    /**
+     *  перемещает автомобиль , расходуя топливо
+     * @param miles
+     * @return успешно?
+     */
     public boolean Drive(int miles) {
         if (miles * costOfMile > fuel || miles * costOfMile < -fuel)
             return false;

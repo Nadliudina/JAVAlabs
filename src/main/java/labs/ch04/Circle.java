@@ -2,6 +2,12 @@ package labs.ch04;
 
 import labs.ch02.Point;
 
+/**
+ * __4__
+ * __5__
+ * class Circle extends Shape
+ *
+ */
 public class Circle extends Shape {
     public double radius;
     public Circle(Point center,double radius) {

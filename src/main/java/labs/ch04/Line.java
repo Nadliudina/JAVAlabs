@@ -2,6 +2,14 @@ package labs.ch04;
 
 import labs.ch02.Point;
 
+/**
+ * __4__
+ * __5_-
+ * __9__
+ *
+ *
+ */
+
 public class Line extends Shape{
     public Point from;
     public Point to;

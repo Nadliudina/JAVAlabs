@@ -7,6 +7,11 @@ package labs.ch03;
  */
 public class Runner {
 
+    /**
+     * возвращает runnables с выполненным run()
+     * @param runnables
+     * @return
+     */
     public static Runnable concatRunnables(Runnable[] runnables) {
         return () -> {
             for (Runnable runnable : runnables) {
@@ -15,6 +20,10 @@ public class Runner {
         };
     }
 
+    /**
+     * запускает runnables в отдельном потоке
+     * @param runnables
+     */
     public static void Execute(Runnable[] runnables) {
         Runnable runnable = concatRunnables(runnables);
         Thread thread = new Thread(runnable);

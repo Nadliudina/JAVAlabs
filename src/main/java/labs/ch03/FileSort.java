@@ -3,6 +3,12 @@ package labs.ch03;
 import java.io.File;
 import java.util.Arrays;
 
+/**
+ * class FileSort
+ * Sort(File[] files) сортирует массив файлов и директорий
+ *
+ */
+
 public class FileSort {
     public static void Sort(File[] files) {
         //   Arrays.sort(files);

@@ -1,7 +1,8 @@
 package labs.ch03;
 
 /**
- * 1,2
+ * class Employee
+ *
  */
 public class Employee implements Measurable {
     private double salary;

@@ -2,6 +2,12 @@ package labs.ch04;
 
 import labs.ch02.Point;
 
+/**
+ * __4__
+ * __5__
+ * __9__
+ *
+ */
 public class Rectangle extends Shape{
     public Point topLeft;
     public double width;

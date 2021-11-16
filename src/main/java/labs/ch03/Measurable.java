@@ -9,6 +9,11 @@ package labs.ch03;
 public interface Measurable {
     double getMeasure();
 
+    /**
+     * среднее арифметическое
+     * @param objects
+     * @return
+     */
     static double average(Measurable[] objects) {
         double sum = 0;
         int count = 0;
@@ -19,6 +24,11 @@ public interface Measurable {
         return (count == 0 ? 0 : sum / count);
     }
 
+    /**
+     *
+     * @param objects
+     * @return имя "наибольшего" объекта
+     */
     static String largest(Measurable[] objects) {
         double value = objects[0].getMeasure();
         Measurable max = objects[0];

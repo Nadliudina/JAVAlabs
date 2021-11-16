@@ -13,6 +13,10 @@ import java.util.Scanner;
 public class MagicSquare {
     private int[][] sq;
 
+    /**
+     * ввод с клавиатуры
+     * @return IsMagicSquare
+     */
     public boolean InputSquare() {
         int I;
         Scanner in = new Scanner(System.in);
@@ -35,6 +39,11 @@ public class MagicSquare {
         return IsMagicSquare(sq);
     }
 
+    /**
+     * ввод квадрата
+     * @param sq1
+     * @return IsMagicSquare
+     */
     public boolean InputSquare(int[][] sq1) {
         if (!IsMagicSquare(sq1))
             return false;
@@ -49,6 +58,11 @@ public class MagicSquare {
         return IsMagicSquare(sq);
     }
 
+    /**
+     * является ли магическим?
+     * @param sq
+     * @return
+     */
     public static boolean IsMagicSquare(int[][] sq) {
         //  int size= (int) pow(sq.length,0.5);
         int size = sq.length;

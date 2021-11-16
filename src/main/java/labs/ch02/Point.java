@@ -40,19 +40,41 @@ public class Point {
         this.y=y;
     }
 
+    /**
+     *  получить новый объект этого класса со смещением на указанную величину
+     * @param x1
+     * @param y1
+     * @return
+     */
     public Point GetPointWithShift(double x1, double y1) {
         return new Point(x += x1, y += y1);
     }
 
+    /**
+     * получить новый объект этого класса со смещением в указанную величину
+     * @param x1
+     * @param y1
+     * @return
+     */
     public Point GetPointWithScale(double x1, double y1) {
         return new Point(x *= x1, y *= y1);
     }
 
+    /**
+     * смещение на указанную величину
+     * @param x1
+     * @param y1
+     */
     public void ShiftPoint(double x1, double y1) {
         x += x1;
         y += y1;
     }
 
+    /**
+     * смещением в указанную величину
+     * @param x1
+     * @param y1
+     */
     public void ScalePoint(double x1, double y1) {
         x *= x1;
         y *= y1;

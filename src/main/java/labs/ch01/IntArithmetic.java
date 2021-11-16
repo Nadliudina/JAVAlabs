@@ -10,6 +10,11 @@ package labs.ch01;
  *
  */
 public class IntArithmetic {
+    /**
+     * cумма
+     * @param x
+     * @param y
+     */
     public static void PrintSum(int x, int y) {
         System.out.print(x);
         System.out.print(" + ");
@@ -18,6 +23,11 @@ public class IntArithmetic {
         System.out.println(Integer.toUnsignedString(x + y));
     }
 
+    /**
+     * разность
+     * @param x
+     * @param y
+     */
     public static void PrintDifference(int x, int y) {
         System.out.print(x);
         System.out.print(" - ");
@@ -27,6 +37,11 @@ public class IntArithmetic {
         System.out.println(Integer.toUnsignedString(x - y));
     }
 
+    /**
+     * произведение
+     * @param x
+     * @param y
+     */
     public static void PrintProduct(int x, int y) {
         System.out.print(x);
         System.out.print(" * ");
@@ -35,6 +50,11 @@ public class IntArithmetic {
         System.out.println(Integer.toUnsignedString(x * y));
     }
 
+    /**
+     * частное
+     * @param x
+     * @param y
+     */
     public static void PrintQuotient(int x, int y) {
         System.out.print(x);
         System.out.print(" / ");
@@ -54,12 +74,23 @@ public class IntArithmetic {
         System.out.println(y);
     }
 
+    /**
+     * остаток
+     * @param x
+     * @param y
+     * @return
+     */
     public static int Remainder(int x, int y) {
         while (x >= y)
             x -= y;
         return x;
     }
 
+    /**
+     * остаток
+     * @param x
+     * @param y
+     */
     public static void PrintRemainder(int x, int y) {
         System.out.print(x);
         while (x >= y)

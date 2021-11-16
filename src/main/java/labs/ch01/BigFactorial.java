@@ -3,11 +3,15 @@ package labs.ch01;
 import java.math.BigInteger;
 
 /**
- * класс BigFactorial с методом BigIntegerFactorial,
- * вычисляющим значение факториала числа типа
- * BigInteger
+ * класс BigFactorial
+ *
  */
 public class BigFactorial {
+    /**
+     * вычисляющим значение факториала числа типа BigInteger
+     * @param x
+     * @return факториал
+     */
     public static BigInteger BigIntegerFactorial(BigInteger x) {
         if (x.equals(0))
             return BigInteger.valueOf(1);

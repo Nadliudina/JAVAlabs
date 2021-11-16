@@ -3,6 +3,10 @@ package labs.ch04;
 import labs.ch02.Point;
 
 /**
+ * __1__
+ * __2__
+ * __3__
+ * __9__
  * класс LabeledPoint
  * getLabel
  * toString

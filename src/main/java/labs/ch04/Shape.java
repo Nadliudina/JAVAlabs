@@ -3,9 +3,12 @@ package labs.ch04;
 import labs.ch02.Point;
 
 /**
+ * __4__
+ * __9__
  * класс Shape
  * void moveBy(double dx,double dy) передвигает center
  * public abstract Point getCenter() аксессор center
+ * toString
  */
 public abstract class Shape implements Cloneable {
     public Point center;
